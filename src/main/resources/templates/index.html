@@ -2,20 +2,67 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="header">HEADER</div>
-<div class="container">
-    <h1>Moje Projekty</h1>
-    <div class="projects">
-        <div th:each="project : ${projects}" class="project">
-            <h2 th:text="${project.name}">Nazwa Projektu</h2>
-            <p th:text="${project.description}">Opis Projektu</p>
-            <a th:href="${project.url}" target="_blank">Zobacz na GitHub</a>
+<!-- Górny pasek nawigacyjny -->
+<header class="header">
+    <nav class="navbar">
+        <a href="/" class="logo">Moje Portfolio</a>
+        <div class="menu">
+            <a href="#projects">Projekty</a>
+            <a href="#about">O mnie</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Zdjęcie -->
+<div class="photo-section">
+    <img src="/MyPicture.jpg" alt="Moje zdjęcie" class="profile-photo">
+</div>
+
+<!-- Sekcja z projektami -->
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h1 class="section-title">Moje Projekty</h1>
+        <div class="projects">
+            <div th:each="project : ${projects}" class="project-card">
+                <h2 th:text="${project.name}" class="project-title">Nazwa Projektu</h2>
+                <p th:text="${project.description}" class="project-description">Opis Projektu</p>
+                <a th:href="${project.url}" target="_blank" class="project-link">Zobacz na GitHub</a>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Sekcja o mnie -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h1 class="section-title">O mnie</h1>
+        <p class="about-text">
+            Cześć! Jestem programistą z pasją do tworzenia aplikacji webowych.
+            Specjalizuję się w technologii Java i Spring Boot. Moje portfolio to zbiór projektów,
+            które realizowałem w trakcie nauki i pracy zawodowej.
+        </p>
+    </div>
+</section>
+
+<!-- Sekcja kontaktowa -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h1 class="section-title">Kontakt</h1>
+        <p class="contact-text">Zapraszam do kontaktu przez e-mail: <a href="mailto:igosobolewski@gmail.com" class="email-link" style="text-decoration: none;">igosobolewski@gmail.com</a></p>
+    </div>
+</section>
+
+<!-- Stopka -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Igor Sobolewski. Wszelkie prawa zastrzeżone.</p>
+    </div>
+</footer>
 </body>
 </html>

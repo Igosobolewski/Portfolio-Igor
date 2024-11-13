@@ -1,39 +1,161 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Podstawowe ustawienia */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Górny pasek nawigacyjny */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+
+/* Sekcje */
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
+.section-title {
+    font-size: 32px;
     color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sekcja projektów */
+.projects-section {
+    padding: 40px 0;
+    background-color: #fff;
 }
 
 .projects {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
-.project {
+.project-card {
     background: #fff;
-    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
 }
 
-.project h2 {
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
+/* Sekcja o mnie */
+.about-section, .contact-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-text, .contact-text {
+    font-size: 18px;
     color: #555;
 }
 
-.project a {
-    color: #1a73e8;
-    text-decoration: none;
+/* Stopka */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Stylizacja sekcji zdjęcia */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 4px solid #333;
+}
+
+.email-link {
+    color: darkblue;
+}
+
+.email-link:hover{
+    opacity: 50%;
+    transition: all 100ms ease-in-out;
 }

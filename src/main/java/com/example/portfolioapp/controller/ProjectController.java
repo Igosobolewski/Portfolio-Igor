@@ -16,7 +16,7 @@ public class ProjectController {
         this.projectService = projectService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
         model.addAttribute("projects", projectService.getProjects());
         return "index";

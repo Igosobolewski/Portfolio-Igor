@@ -10,8 +10,8 @@ public class ProjectService {
     public List<Project> getProjects() {
         return Arrays.asList(
                 new Project("Projekt 1", "Opis pierwszego projektu", "#"),
-                new Project("Projekt 1", "Opis pierwszego projektu", "#"),
-                new Project("Projekt 1", "Opis pierwszego projektu", "#")
+                new Project("Projekt 2", "Opis drugiego projektu", "#"),
+                new Project("Projekt 3", "Opis trzeciego projektu", "#")
         );
     }
 }

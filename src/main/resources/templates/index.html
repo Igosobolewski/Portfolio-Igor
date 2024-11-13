@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Portfolio</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="header">HEADER</div>
+<div class="container">
+    <h1>Moje Projekty</h1>
+    <div class="projects">
+        <div th:each="project : ${projects}" class="project">
+            <h2 th:text="${project.name}">Nazwa Projektu</h2>
+            <p th:text="${project.description}">Opis Projektu</p>
+            <a th:href="${project.url}" target="_blank">Zobacz na GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
